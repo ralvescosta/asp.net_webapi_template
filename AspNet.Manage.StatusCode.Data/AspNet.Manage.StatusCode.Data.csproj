@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OneOf" Version="3.0.178" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspNet.Manage.StatusCode.Application\AspNet.Manage.StatusCode.Application.csproj" />
+  </ItemGroup>
+
+</Project>
