@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using AspNet.Manage.StatusCode.Data;
+using AspNet.Manage.StatusCode.WebApi.Extensions;
 
 namespace AspNet.Manage.StatusCode.WebApi
 {
@@ -23,9 +24,12 @@ namespace AspNet.Manage.StatusCode.WebApi
         {
 
             services.AddControllers();
-            services.AddScoped<IUserAppService, UserAppService>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddAppService();
+            services.AddApplication();
+            services.AddData();
+            services.AddGlobalExceptionHandlerMiddleware();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNet.Manage.StatusCode.WebApi", Version = "v1" });
@@ -46,6 +50,8 @@ namespace AspNet.Manage.StatusCode.WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseGlobalExceptionHandlerMiddleware();
 
             app.UseEndpoints(endpoints =>
             {
