@@ -1,4 +1,4 @@
-﻿using AspNet.Manage.StatusCode.AppService;
+﻿using AspNet.Manage.StatusCode.Application;
 using AspNet.Manage.StatusCode.Domain;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,16 +8,16 @@ namespace AspNet.Manage.StatusCode.WebApi.Controllers
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly IUserAppService _userAppService;
-        public UsersController(IUserAppService userAppService)
+        private readonly IUserService _userService;
+        public UsersController(IUserService userService)
         {
-            _userAppService = userAppService;
+            _userService = userService;
         }
 
         [HttpPost]
         public IActionResult Post(CreateUserViewModel viewModel)
         {
-            var result = _userAppService.RegisterUser(viewModel);
+            var result = _userService.Create(viewModel);
 
             return result.Match<IActionResult>(
                 user => Ok(user),

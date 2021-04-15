@@ -5,8 +5,6 @@ VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Manage.StatusCode.WebApi", "AspNet.Manage.StatusCode.WebApi\AspNet.Manage.StatusCode.WebApi.csproj", "{7C0BD8DB-E9A0-4590-80DF-F3485F351ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Manage.StatusCode.AppService", "AspNet.Manage.StatusCode.AppService\AspNet.Manage.StatusCode.AppService.csproj", "{4F14240E-944E-4E8D-AC79-0567688A7033}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Manage.StatusCode.Application", "AspNet.Manage.StatusCode.Application\AspNet.Manage.StatusCode.Application.csproj", "{ED0D7B85-043F-4E58-83B4-134877AE8658}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Manage.StatusCode.Domain", "AspNet.Manage.StatusCode.Domain\AspNet.Manage.StatusCode.Domain.csproj", "{176AEBFD-F479-4DA2-B86A-B08A657C2FB4}"
@@ -38,18 +36,6 @@ Global
 		{7C0BD8DB-E9A0-4590-80DF-F3485F351ED1}.Release|x64.Build.0 = Release|Any CPU
 		{7C0BD8DB-E9A0-4590-80DF-F3485F351ED1}.Release|x86.ActiveCfg = Release|Any CPU
 		{7C0BD8DB-E9A0-4590-80DF-F3485F351ED1}.Release|x86.Build.0 = Release|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Debug|x64.Build.0 = Debug|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Debug|x86.Build.0 = Debug|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Release|x64.ActiveCfg = Release|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Release|x64.Build.0 = Release|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Release|x86.ActiveCfg = Release|Any CPU
-		{4F14240E-944E-4E8D-AC79-0567688A7033}.Release|x86.Build.0 = Release|Any CPU
 		{ED0D7B85-043F-4E58-83B4-134877AE8658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ED0D7B85-043F-4E58-83B4-134877AE8658}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED0D7B85-043F-4E58-83B4-134877AE8658}.Debug|x64.ActiveCfg = Debug|Any CPU

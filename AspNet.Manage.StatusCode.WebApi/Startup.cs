@@ -1,12 +1,9 @@
-using AspNet.Manage.StatusCode.AppService;
-using AspNet.Manage.StatusCode.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using AspNet.Manage.StatusCode.Data;
 using AspNet.Manage.StatusCode.WebApi.Extensions;
 
 namespace AspNet.Manage.StatusCode.WebApi
@@ -25,7 +22,6 @@ namespace AspNet.Manage.StatusCode.WebApi
 
             services.AddControllers();
 
-            services.AddAppService();
             services.AddApplication();
             services.AddData();
             services.AddGlobalExceptionHandlerMiddleware();
