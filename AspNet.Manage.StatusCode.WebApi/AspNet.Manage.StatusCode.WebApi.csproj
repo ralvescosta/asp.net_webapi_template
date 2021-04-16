@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Elmah.Io.Extensions.Logging" Version="3.9.12" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="OneOf" Version="3.0.178" />
@@ -12,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNet.Manage.StatusCode.AppService\AspNet.Manage.StatusCode.AppService.csproj" />
+    <ProjectReference Include="..\AspNet.Manage.StatusCode.Application\AspNet.Manage.StatusCode.Application.csproj" />
     <ProjectReference Include="..\AspNet.Manage.StatusCode.Domain\AspNet.Manage.StatusCode.Domain.csproj" />
     <ProjectReference Include="..\AspNet.Manage.StatusCode.Data\AspNet.Manage.StatusCode.Data.csproj" />
   </ItemGroup>
