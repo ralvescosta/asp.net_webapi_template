@@ -5,7 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 
-namespace AspNet.Manage.StatusCode.WebApi
+namespace AspNet.Template.WebApi
 {
   public class Program
     {

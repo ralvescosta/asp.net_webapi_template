@@ -1,8 +1,8 @@
-using AspNet.Manage.StatusCode.Application;
-using AspNet.Manage.StatusCode.Data;
+using AspNet.Template.Application;
+using AspNet.Template.Data;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNet.Manage.StatusCode.WebApi.Extensions
+namespace AspNet.Template.WebApi.Extensions
 {
     public static class IoC
     {

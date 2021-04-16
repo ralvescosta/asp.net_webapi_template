@@ -1,10 +1,10 @@
 ﻿using System;
-using AspNet.Manage.StatusCode.Application;
-using AspNet.Manage.StatusCode.Domain;
+using AspNet.Template.Application;
+using AspNet.Template.Domain;
 using Microsoft.Extensions.Logging;
 using OneOf;
 
-namespace AspNet.Manage.StatusCode.Data
+namespace AspNet.Template.Data
 {
     public class UserRepository : IUserRepository
     {

@@ -1,8 +1,8 @@
-using AspNet.Manage.StatusCode.WebApi.Middleware;
+using AspNet.Template.WebApi.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNet.Manage.StatusCode.WebApi.Extensions
+namespace AspNet.Template.WebApi.Extensions
 {
     
     public static class GlobalExceptionHandlerMiddlewareExtensions

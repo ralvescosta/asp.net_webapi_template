@@ -1,7 +1,7 @@
-using AspNet.Manage.StatusCode.Domain;
+using AspNet.Template.Domain;
 using OneOf;
 
-namespace AspNet.Manage.StatusCode.Application
+namespace AspNet.Template.Application
 {
     public interface IUserService
     {

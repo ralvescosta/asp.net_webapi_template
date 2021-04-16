@@ -1,8 +1,8 @@
-﻿using AspNet.Manage.StatusCode.Application;
-using AspNet.Manage.StatusCode.Domain;
+﻿using AspNet.Template.Application;
+using AspNet.Template.Domain;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNet.Manage.StatusCode.WebApi.Controllers
+namespace AspNet.Template.WebApi.Controllers
 {
   [ApiController]
     [Route("[controller]")]

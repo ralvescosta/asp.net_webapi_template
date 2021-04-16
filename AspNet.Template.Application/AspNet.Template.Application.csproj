@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNet.Manage.StatusCode.Domain\AspNet.Manage.StatusCode.Domain.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Domain\AspNet.Template.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -14,9 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNet.Manage.StatusCode.Application\AspNet.Manage.StatusCode.Application.csproj" />
-    <ProjectReference Include="..\AspNet.Manage.StatusCode.Domain\AspNet.Manage.StatusCode.Domain.csproj" />
-    <ProjectReference Include="..\AspNet.Manage.StatusCode.Data\AspNet.Manage.StatusCode.Data.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Application\AspNet.Template.Application.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Domain\AspNet.Template.Domain.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Data\AspNet.Template.Data.csproj" />
   </ItemGroup>
 
 </Project>

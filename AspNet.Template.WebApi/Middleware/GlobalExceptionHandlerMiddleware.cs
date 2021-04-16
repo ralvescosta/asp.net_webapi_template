@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace AspNet.Manage.StatusCode.WebApi.Middleware
+namespace AspNet.Template.WebApi.Middleware
 {
     public class GlobalExceptionHandlerMiddleware : IMiddleware
     {

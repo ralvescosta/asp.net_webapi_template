@@ -1,4 +1,4 @@
-namespace AspNet.Manage.StatusCode.WebApi
+namespace AspNet.Template.WebApi
 {
     public class LogsConfig
     {

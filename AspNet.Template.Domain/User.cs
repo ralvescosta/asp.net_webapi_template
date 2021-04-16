@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AspNet.Manage.StatusCode.Domain
+namespace AspNet.Template.Domain
 {
     public class User
     {

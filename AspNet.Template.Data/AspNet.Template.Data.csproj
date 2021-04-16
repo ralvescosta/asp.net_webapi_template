@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNet.Manage.StatusCode.Application\AspNet.Manage.StatusCode.Application.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Application\AspNet.Template.Application.csproj" />
   </ItemGroup>
 
 </Project>
