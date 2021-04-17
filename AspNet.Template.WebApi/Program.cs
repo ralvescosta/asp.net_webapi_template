@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using AspNet.Template.WebApi.Utils;
 
 namespace AspNet.Template.WebApi
 {
@@ -18,12 +19,12 @@ namespace AspNet.Template.WebApi
             Host.CreateDefaultBuilder(args)
                 .ConfigureLogging((ctx, logging) => 
                 {
-                    var loggingConfigs = ctx.Configuration.GetSection("AppConfiguration:Logging").Get<LogsConfig>();
+                    var configurations = ctx.Configuration.GetSection("AppConfiguration").Get<Configurations>();
                     
                     logging.AddElmahIo(options => 
                     {
-                        options.ApiKey = loggingConfigs.ElmahIoApiKey;
-                        options.LogId = new Guid(loggingConfigs.ElmahIoLogId);
+                        options.ApiKey = configurations.Logging.ElmahIoApiKey;
+                        options.LogId = new Guid(configurations.Logging.ElmahIoLogId);
                     });
                     logging.AddFilter<ElmahIoLoggerProvider>(null, LogLevel.Warning);
                 })

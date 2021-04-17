@@ -1,5 +1,6 @@
 using AspNet.Template.Application;
 using AspNet.Template.Data;
+using AspNet.Template.Data.Context;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNet.Template.WebApi.Extensions
@@ -15,6 +16,7 @@ namespace AspNet.Template.WebApi.Extensions
         public static IServiceCollection AddData(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IDbContext, DbContext>();
             return services;
         }
     }
