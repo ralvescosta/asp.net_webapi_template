@@ -11,6 +11,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Npgsql" Version="6.0.0-preview3" />
     <PackageReference Include="OneOf" Version="3.0.178" />
+    <PackageReference Include="Sentry.AspNetCore" Version="3.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 

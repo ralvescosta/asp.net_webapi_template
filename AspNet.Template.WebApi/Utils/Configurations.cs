@@ -9,5 +9,6 @@ namespace AspNet.Template.WebApi.Utils
     public class Logging {
         public string ElmahIoApiKey { get; set; }
         public string ElmahIoLogId { get; set; }
+        public string Sentry { get; set; }
     }
 }
