@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AspNet.Template.Application\AspNet.Template.Application.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Shared\AspNet.Template.Shared.csproj" />
   </ItemGroup>
 
 </Project>

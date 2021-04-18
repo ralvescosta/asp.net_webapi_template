@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using AspNet.Template.WebApi.Extensions;
+using AspNet.Template.Shared.Configurations;
 
 namespace AspNet.Template.WebApi
 {
@@ -19,12 +20,13 @@ namespace AspNet.Template.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
-
             services.AddApplication();
             services.AddData();
             services.AddGlobalExceptionHandlerMiddleware();
+            
+            var configs = Configuration.GetSection("AppConfiguration").Get<Configurations>();
+            services.AddSingleton<Configurations>(provider => configs);
             
             services.AddSwaggerGen(c =>
             {

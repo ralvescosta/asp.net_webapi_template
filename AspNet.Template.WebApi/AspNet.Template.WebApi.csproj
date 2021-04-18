@@ -19,6 +19,7 @@
     <ProjectReference Include="..\AspNet.Template.Application\AspNet.Template.Application.csproj" />
     <ProjectReference Include="..\AspNet.Template.Domain\AspNet.Template.Domain.csproj" />
     <ProjectReference Include="..\AspNet.Template.Data\AspNet.Template.Data.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Shared\AspNet.Template.Shared.csproj" />
   </ItemGroup>
 
 </Project>

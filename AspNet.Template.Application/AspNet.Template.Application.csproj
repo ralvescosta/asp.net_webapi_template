@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AspNet.Template.Domain\AspNet.Template.Domain.csproj" />
+    <ProjectReference Include="..\AspNet.Template.Shared\AspNet.Template.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

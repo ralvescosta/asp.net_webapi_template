@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Template.Domain", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Template.Data", "AspNet.Template.Data\AspNet.Template.Data.csproj", "{E016E37A-FA07-4584-A82A-D682D0841111}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Template.Shared", "AspNet.Template.Shared\AspNet.Template.Shared.csproj", "{3C30B657-8A31-4BE0-A070-7C85E1C9D712}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,17 @@ Global
 		{E016E37A-FA07-4584-A82A-D682D0841111}.Release|x64.Build.0 = Release|Any CPU
 		{E016E37A-FA07-4584-A82A-D682D0841111}.Release|x86.ActiveCfg = Release|Any CPU
 		{E016E37A-FA07-4584-A82A-D682D0841111}.Release|x86.Build.0 = Release|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Debug|x64.Build.0 = Debug|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Debug|x86.Build.0 = Debug|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Release|x64.ActiveCfg = Release|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Release|x64.Build.0 = Release|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Release|x86.ActiveCfg = Release|Any CPU
+		{3C30B657-8A31-4BE0-A070-7C85E1C9D712}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

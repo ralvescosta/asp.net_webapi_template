@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using AspNet.Template.Shared.Configurations;
 using Dapper;
 using Npgsql;
 using static Dapper.SqlMapper;
@@ -11,9 +12,9 @@ namespace AspNet.Template.Data.Context
     public class DbContext : IDbContext
     {
         private readonly IDbConnection dbConnection;
-        public DbContext()
+        public DbContext(Configurations configs)
         {
-            dbConnection = new NpgsqlConnection("");
+            dbConnection = new NpgsqlConnection(configs.ConnectionString);
             if(dbConnection.State == ConnectionState.Closed)
                 dbConnection.Open();
         }

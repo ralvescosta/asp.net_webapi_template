@@ -1,4 +1,4 @@
-namespace AspNet.Template.WebApi.Utils
+namespace AspNet.Template.Shared.Configurations
 {
     public class Configurations
     {
