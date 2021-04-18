@@ -1,10 +1,10 @@
 using AspNet.Template.Domain;
-using OneOf;
+using AspNet.Template.Shared.Utils;
 
 namespace AspNet.Template.Application
 {
-    public interface IUserRepository
+  public interface IUserRepository
     {
-        OneOf<User, InternalErrorException> Create(User user);
+        Result<User> Create(User user);
     }
 }

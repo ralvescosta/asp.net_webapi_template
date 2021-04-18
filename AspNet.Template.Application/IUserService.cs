@@ -1,10 +1,10 @@
 using AspNet.Template.Domain;
-using OneOf;
+using AspNet.Template.Shared.Utils;
 
 namespace AspNet.Template.Application
 {
-    public interface IUserService
+  public interface IUserService
     {
-        OneOf<User, AlreadyExisteException, InternalErrorException> Create(CreateUserViewModel viewModel);
+        Result<User> Create(CreateUserViewModel viewModel);
     }
 }

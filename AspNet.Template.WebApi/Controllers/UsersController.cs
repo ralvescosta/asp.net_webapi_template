@@ -1,4 +1,5 @@
-﻿using AspNet.Template.Application;
+﻿using System;
+using AspNet.Template.Application;
 using AspNet.Template.Domain;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,9 +21,19 @@ namespace AspNet.Template.WebApi.Controllers
             var result = _userService.Create(viewModel);
 
             return result.Match<IActionResult>(
-                user => Ok(user),
-                alreadyExist => Conflict(new {message = alreadyExist.Message }),
-                internalError => Problem(internalError.Message)
+                user => Created("",user),
+                failure => 
+                {
+                    switch(failure)
+                    {
+                        case AlreadyExisteException:
+                            return Conflict();
+                        case InternalErrorException:
+                            return Problem();
+                        default:
+                            return Problem();
+                    }
+                }
             );
         }
     }
