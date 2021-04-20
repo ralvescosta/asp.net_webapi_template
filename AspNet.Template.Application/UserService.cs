@@ -2,7 +2,6 @@
 using AspNet.Template.Domain;
 using AspNet.Template.Shared.Configurations;
 using AspNet.Template.Shared.Utils;
-using OneOf;
 
 namespace AspNet.Template.Application
 {

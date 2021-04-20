@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNet.Template.WebApi.Extensions
 {
-    
     public static class GlobalExceptionHandlerMiddlewareExtensions
     {
         public static IServiceCollection AddGlobalExceptionHandlerMiddleware(this IServiceCollection services)
