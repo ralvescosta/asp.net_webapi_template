@@ -1,3 +1,4 @@
+using System.IO.Compression;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using AspNet.Template.WebApi.Extensions;
 using AspNet.Template.Shared.Configurations;
+using Microsoft.AspNetCore.ResponseCompression;
 
 namespace AspNet.Template.WebApi
 {
@@ -24,7 +26,14 @@ namespace AspNet.Template.WebApi
             services.AddApplication();
             services.AddData();
             services.AddGlobalExceptionHandlerMiddleware();
-            
+
+            /*GZIP CONFIGURATION*/
+            services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
+            services.AddResponseCompression(options => 
+            {
+                options.Providers.Add<GzipCompressionProvider>();
+            });
+
             var configs = Configuration.GetSection("AppConfiguration").Get<Configurations>();
             services.AddSingleton<Configurations>(provider => configs);
             
