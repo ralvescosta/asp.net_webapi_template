@@ -15,5 +15,10 @@ namespace AspNet.Template.WebApi.Extensions
         {
             app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
         }
+
+        public static void UseResponseHeadersConfigsMiddleware(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<ResponseHeadersConfigsMiddleware>();
+        }
     }
 }

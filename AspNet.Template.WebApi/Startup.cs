@@ -1,3 +1,4 @@
+using System;
 using System.IO.Compression;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -53,12 +54,12 @@ namespace AspNet.Template.WebApi
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthorization();
-
+            
             app.UseGlobalExceptionHandlerMiddleware();
+            app.UseResponseHeadersConfigsMiddleware();
 
             app.UseEndpoints(endpoints =>
             {
