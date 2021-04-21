@@ -34,6 +34,7 @@ namespace AspNet.Template.WebApi
             {
                 options.Providers.Add<GzipCompressionProvider>();
             });
+            /**/
 
             var configs = Configuration.GetSection("AppConfiguration").Get<Configurations>();
             services.AddSingleton<Configurations>(provider => configs);
