@@ -1,7 +1,7 @@
-using AspNet.Template.Domain;
+using AspNet.Template.Domain.Entities;
 using AspNet.Template.Shared.Utils;
 
-namespace AspNet.Template.Application
+namespace AspNet.Template.Application.Interfaces
 {
   public interface IUserRepository
     {

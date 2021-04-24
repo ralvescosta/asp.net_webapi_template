@@ -1,9 +1,12 @@
-﻿using System;
-using AspNet.Template.Domain;
+﻿using AspNet.Template.Application.Interfaces;
+using AspNet.Template.Domain.Entities;
+using AspNet.Template.Domain.Exceptions;
+using AspNet.Template.Domain.Services;
+using AspNet.Template.Domain.ViewModels;
 using AspNet.Template.Shared.Configurations;
 using AspNet.Template.Shared.Utils;
 
-namespace AspNet.Template.Application
+namespace AspNet.Template.Application.Services
 {
   public class UserService : IUserService
   {

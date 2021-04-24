@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AspNet.Template.Domain
+namespace AspNet.Template.Domain.Entities
 {
     public class User
     {

@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace AspNet.Template.Domain
+namespace AspNet.Template.Domain.ViewModels
 {
     public class CreateUserViewModel
     {

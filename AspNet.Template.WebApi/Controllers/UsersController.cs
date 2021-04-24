@@ -1,11 +1,12 @@
 ﻿using System;
-using AspNet.Template.Application;
-using AspNet.Template.Domain;
+using AspNet.Template.Domain.Exceptions;
+using AspNet.Template.Domain.Services;
+using AspNet.Template.Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNet.Template.WebApi.Controllers
 {
-  [ApiController]
+    [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {

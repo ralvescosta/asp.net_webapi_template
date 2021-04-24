@@ -1,6 +1,6 @@
 using System;
 
-namespace AspNet.Template.Domain
+namespace AspNet.Template.Domain.Exceptions
 {
     public class UnauthorizedException : Exception
     {

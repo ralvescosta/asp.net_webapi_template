@@ -1,10 +1,10 @@
 ﻿using System;
-using AspNet.Template.Application;
-using AspNet.Template.Domain;
+using AspNet.Template.Application.Interfaces;
+using AspNet.Template.Domain.Entities;
 using AspNet.Template.Shared.Utils;
 using Microsoft.Extensions.Logging;
 
-namespace AspNet.Template.Data
+namespace AspNet.Template.Data.Repositories
 {
     public class UserRepository : IUserRepository
     {
@@ -20,5 +20,5 @@ namespace AspNet.Template.Data
             // return ex;
             return new Result<User>(user);
         }
-    }
+  }
 }
