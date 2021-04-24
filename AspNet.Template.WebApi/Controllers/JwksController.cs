@@ -9,7 +9,7 @@ namespace AspNet.Template.WebApi.Controllers
     {
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get([FromHeader] string authorization)
         {
             var jwks = new JwksViewModel
             {
