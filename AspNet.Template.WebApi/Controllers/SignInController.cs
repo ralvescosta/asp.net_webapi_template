@@ -1,7 +1,6 @@
 using AspNet.Template.Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using AspNet.Template.Application.Services;
+using AspNet.Template.Application.Interfaces;
 
 namespace AspNet.Template.WebApi.Controllers
 {
@@ -9,22 +8,20 @@ namespace AspNet.Template.WebApi.Controllers
     [Route("[controller]")]
     public class SignInController : ControllerBase
     {
-        private readonly GenerateToken _tokenManager;
-        public SignInController(GenerateToken tokenManager)
+        private readonly ISignInUserService _signInUserService;
+        public SignInController(ISignInUserService signInUserService)
         {
-            _tokenManager = tokenManager;
+            _signInUserService = signInUserService;
         }
         [HttpPost]
         public IActionResult Post(UserSignInViewModel userSignInViewModel)
         {
-            var accessToken = _tokenManager.JwtGenerator(userSignInViewModel.Email, userSignInViewModel.Audiency);
-            var authenticatedUser = new AuthenticatedUserViewModel
-            {
-                AccessToken = accessToken,
-                Email = userSignInViewModel.Email,
-                ExpiredAt = DateTime.Now.AddHours(1).ToString()
-            };
-            return Ok(authenticatedUser);
+            var accessToken = _signInUserService.SignIn(userSignInViewModel, "audience");
+            
+            return accessToken.Match<IActionResult>(
+                success => Ok(success), 
+                failure => Problem()
+            );
         }
     }
     

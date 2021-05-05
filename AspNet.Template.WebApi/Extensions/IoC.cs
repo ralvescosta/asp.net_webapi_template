@@ -1,4 +1,5 @@
 using AspNet.Template.Application.Interfaces;
+using AspNet.Template.Application.Manager;
 using AspNet.Template.Application.Services;
 using AspNet.Template.Data.Context;
 using AspNet.Template.Data.Repositories;
@@ -12,7 +13,8 @@ namespace AspNet.Template.WebApi.Extensions
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<GenerateToken, GenerateToken>();
+            services.AddScoped<ITokenManager, TokenManager>();
+            services.AddScoped<ISignInUserService, SignInUserService>();
             return services;
         }
 

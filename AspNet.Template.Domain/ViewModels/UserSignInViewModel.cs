@@ -10,8 +10,5 @@ namespace AspNet.Template.Domain.ViewModels
         
         [Required]
         public string Password { get; set; }
-
-        [Required]
-        public string Audiency { get; set; }
     }
 }
