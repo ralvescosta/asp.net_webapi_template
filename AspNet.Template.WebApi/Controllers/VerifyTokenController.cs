@@ -6,18 +6,18 @@ namespace AspNet.Template.WebApi.Controllers
 {
   [ApiController]
     [Route("[controller]")]
-    public class SignInController : ControllerBase
+    public class VerifyTokenController : ControllerBase
     {
         private readonly ISignInUserService _signInUserService;
-        public SignInController(ISignInUserService signInUserService)
+        public VerifyTokenController(ISignInUserService signInUserService)
         {
             _signInUserService = signInUserService;
         }
         [HttpPost]
-        public IActionResult Post(UserSignInViewModel userSignInViewModel)
+        public IActionResult Post([FromHeader] string authorization, [FromHeader] string surname)
         {
-            var accessToken = _signInUserService.SignIn(userSignInViewModel);
-
+            var accessToken = _signInUserService.VerifyToken(authorization, surname);
+            
             return accessToken.Match<IActionResult>(
                 success => Ok(success), 
                 failure => Problem()

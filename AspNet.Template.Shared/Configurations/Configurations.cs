@@ -5,7 +5,7 @@ namespace AspNet.Template.Shared.Configurations
         public string ConnectionString { get; set; }
         public Logging Logging { get; set; }
 
-        public Keys Keys { get; set; }
+        public JwtConfigs JwtConfigs { get; set; }
     }
 
     public class Logging 
@@ -15,9 +15,10 @@ namespace AspNet.Template.Shared.Configurations
         public string Sentry { get; set; }
     }
 
-    public class Keys 
+    public class JwtConfigs 
     {
+        public string Issuer { get; set; }
         public string PrivateKey { get; set; }
-        public string PublicString { get; set; }
+        public string PublicKey { get; set; }
     }
 }
