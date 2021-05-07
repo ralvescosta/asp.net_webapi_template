@@ -17,6 +17,7 @@ namespace AspNet.Template.WebApi.Controllers
         [HttpGet]
         public IActionResult Get([FromHeader] [Required] string authorization)
         {
+            var ipv4 = Request.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
             var result = _jwtCredentailsService.GetJWK();
             
             return result.Match<IActionResult>(

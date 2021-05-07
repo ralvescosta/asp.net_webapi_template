@@ -16,7 +16,8 @@ namespace AspNet.Template.WebApi.Controllers
         [HttpPost]
         public IActionResult Post(UserSignInViewModel userSignInViewModel)
         {
-            var accessToken = _signInUserService.SignIn(userSignInViewModel);
+            var audience = Request.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+            var accessToken = _signInUserService.SignIn(userSignInViewModel, audience);
 
             return accessToken.Match<IActionResult>(
                 success => Ok(success), 

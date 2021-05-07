@@ -14,9 +14,10 @@ namespace AspNet.Template.WebApi.Controllers
             _signInUserService = signInUserService;
         }
         [HttpPost]
-        public IActionResult Post([FromHeader] string authorization, [FromHeader] string surname)
+        public IActionResult Post([FromHeader] string authorization)
         {
-            var accessToken = _signInUserService.VerifyToken(authorization, surname);
+            var audience = Request.HttpContext.Connection.RemoteIpAddress.MapToIPv4().ToString();
+            var accessToken = _signInUserService.VerifyToken(authorization, audience);
             
             return accessToken.Match<IActionResult>(
                 success => Ok(success), 

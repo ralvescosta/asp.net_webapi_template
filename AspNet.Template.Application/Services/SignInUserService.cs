@@ -13,8 +13,7 @@ namespace AspNet.Template.Application.Services
         {
             _tokenManager = tokenManager;
         }
-        
-        public Result<AuthenticatedUserViewModel> SignIn(UserSignInViewModel viewModel)
+        public Result<AuthenticatedUserViewModel> SignIn(UserSignInViewModel viewModel, string audience)
         {
             var user = new User 
             {
@@ -25,7 +24,7 @@ namespace AspNet.Template.Application.Services
             };
             var expireDate = DateTime.UtcNow.AddHours(2);
 
-            var accessToken = _tokenManager.GenerateToken(user, viewModel.Surname, expireDate);
+            var accessToken = _tokenManager.GenerateToken(user, audience, expireDate);
             return accessToken.Match<Result<AuthenticatedUserViewModel>>(
                 success => new Result<AuthenticatedUserViewModel>(
                     new AuthenticatedUserViewModel 
@@ -37,7 +36,6 @@ namespace AspNet.Template.Application.Services
                 failure => new Result<AuthenticatedUserViewModel>(failure)
             );
         }
-        
         public Result<User> VerifyToken(string accessToken, string audience)
         {
             var tokenSplit = accessToken.Split(" ");

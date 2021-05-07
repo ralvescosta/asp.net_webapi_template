@@ -6,7 +6,7 @@ namespace AspNet.Template.Application.Interfaces
 {
     public interface ISignInUserService
     {
-        Result<AuthenticatedUserViewModel> SignIn(UserSignInViewModel viewModel);
+        Result<AuthenticatedUserViewModel> SignIn(UserSignInViewModel viewModel, string audience);
         Result<User> VerifyToken(string accessToken, string audience);
     }
 }
