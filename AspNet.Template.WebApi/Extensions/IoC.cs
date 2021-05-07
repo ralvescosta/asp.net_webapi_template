@@ -12,6 +12,7 @@ namespace AspNet.Template.WebApi.Extensions
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
+            services.AddScoped<IJwkCredentialsService, JwkCredentialsService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ITokenManager, TokenManager>();
             services.AddScoped<ISignInUserService, SignInUserService>();

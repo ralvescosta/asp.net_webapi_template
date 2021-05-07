@@ -106,6 +106,19 @@ namespace AspNet.Template.Application.Manager
                 return new Result<User>(ex);
             }
         }
+        
+        public Result<JsonWebKey> GetJWK()
+        {
+            var publicKeyRaw = Convert.FromBase64String(_configs.JwtConfigs.PublicKey);
+
+            using var rsa = RSA.Create();
+            rsa.ImportSubjectPublicKeyInfo(publicKeyRaw, out _);
+            var key = new RsaSecurityKey(rsa);
+
+            var jwk = JsonWebKeyConverter.ConvertFromRSASecurityKey(key);
+
+            return new Result<JsonWebKey>(jwk);
+        }
         private static long ToUnixEpochDate(DateTime date)
             => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(1970, 1, 1, 0, 0, 0, TimeSpan.Zero)).TotalSeconds);
   }

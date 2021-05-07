@@ -7,5 +7,6 @@ namespace AspNet.Template.Domain.ViewModels
         public string Kid { get; set; }
         public string N { get; set; }
         public string E { get; set; }
+        public string Alg { get; set; }
     }
 }
